@@ -1,5 +1,8 @@
 <?php
-
+include('class.ListMaker.php');
+include('class.InputBox.php');
+$listObj = new ListMaker();
+$inpBoxObj = new InputBox();
 ?>
 <html>
     <head>
@@ -9,18 +12,14 @@
    
     </head>
     <body id="body" style="width:100%;heigt:100%">
-        <div id="mid" style="width:100%;height:600px;display:flex">
-            <div id="mc0" style="width:20%;height:600px">
-                <?php
-                for($i=0;$i<20;$i++)
-                {
-                    echo "<div id='li{$i}' class='li' style='width:100%;height:25px;border-bottom:1px solid white'>{$i}</div>";
-                }
-
-                ?>
-            </div>
-            <input id="inp0" class="inp" style="width:300px;height:30px;border:2px solid red">
-            <button id="btn0" class="" style="width:50px;height:30px;">enter</button>
+        <div id="mid" style="width:800px;height:600px;display:flex;position:relative">
+          <?php  
+                $listObj->makeList(0,20,5,5);
+                $inpBoxObj->input_Box(0,"入力",200,30,180,5);
+                $inpBoxObj->make_button(0,50,30,400,5);
+                $inpBoxObj->input_Box(1,"出力",200,30,180,60);
+          ?>
+            
         </div>
     </body>
 </html>
