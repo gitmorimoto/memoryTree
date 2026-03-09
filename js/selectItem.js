@@ -1,5 +1,7 @@
-export function selectItem() {
-    const liObj = document.querySelectorAll('.li');
+export function selectItem(elemNumber) {
+    const liObj = [];
+
+    liObj[elemNumber] = document.querySelectorAll('.li'+elemNumber);
     let selItem = "";
     liObj.forEach(li=>{
         li.addEventListener('click',function(){
@@ -7,14 +9,15 @@ export function selectItem() {
            
             selItem = li.textContent;
             console.log(selItem);
-            getSelectedItem(selItem)
+            getSelectedItem(selItem,elemNumber);
             
    
         })
     })
-    function getSelectedItem(selItem) {
+    function getSelectedItem(selItem,elemNumber) {
         console.log(selItem);
-        const inp1Obj=document.getElementById('inp1');
-        inp1Obj.value = selItem;
+        let inpObj = [];
+        inpObj[elemNumber]=document.getElementById('inp'+elemNumber);
+        inpObj[elemNumber].value = selItem;
     }
 }
