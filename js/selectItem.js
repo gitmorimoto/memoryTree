@@ -1,9 +1,10 @@
 export function selectItem(elemNumber) {
     const liObj = [];
-
+    console.log("selectItem function is called for elemNumber: "+elemNumber);
     liObj[elemNumber] = document.querySelectorAll('.li'+elemNumber);
     let selItem = "";
-    liObj.forEach(li=>{
+    console.log(liObj[elemNumber].length);
+    liObj[elemNumber].forEach(li=>{
         li.addEventListener('click',function(){
             li.style.backgroundColor = 'orange';
            
@@ -16,8 +17,9 @@ export function selectItem(elemNumber) {
     })
     function getSelectedItem(selItem,elemNumber) {
         console.log(selItem);
+        let outObj = [];
         let inpObj = [];
-        inpObj[elemNumber]=document.getElementById('inp'+elemNumber);
-        inpObj[elemNumber].value = selItem;
+        outObj[elemNumber]=document.getElementById('out'+elemNumber);
+        outObj[elemNumber].textContent = selItem;
     }
 }

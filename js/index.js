@@ -8,7 +8,10 @@ window.addEventListener('DOMContentLoaded',function(){
     initiation(0);
     initiation(1);
     addDatabase("inp0","btn0",makePath);//add the path and string to database
-    showList("inp0","list0");
-    searchDatabase("inp0",makePath);
-    selectItem() ;//add event listener to the list items
+    showList(0,0);
+    showList(1,1);
+    searchDatabase(0,0,makePath);
+    searchDatabase(1,1,makePath);
+    selectItem(0) ;//add event listener to the list items
+    selectItem(1) ;//add event listener to the list items
 })

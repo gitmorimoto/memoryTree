@@ -7,7 +7,7 @@ class OutputBox
         style='width:fit_content;height:fit_content;display:flex;position:absolute;left:{$left}px;top:{$top}px'>";
         echo "<div id='' 
         style='width:fit_content;height:fit_content;'>{$subTitle}</div>";
-        echo "<div id='inp{$elemNumber}' class='out' 
+        echo "<div id='out{$elemNumber}' class='out' 
         style='width:{$width};height:{$height};'></div>";
         echo "</div>";
        

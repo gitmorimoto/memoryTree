@@ -8,7 +8,7 @@ class ListMaker
             
             for($i=0;$i<$listSize;$i++)
             {
-                echo "<div id='li{$i}' class='li' 
+                echo "<div id='li{$elemNumber}_{$i}' class='li{$elemNumber}' 
                 style='width:100%;height:25px;border-bottom:1px solid white'>{$i}</div>";
             }
 
